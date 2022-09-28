@@ -1,4 +1,4 @@
-
+import os
 def suma(num1, num2):
     return num1+num2
 
@@ -16,6 +16,7 @@ def return_values():
     return [num1, num2] #regresa los numeros
 
 if __name__ == '__main__':
+    os.system('cls')
     message=f"Calculadora:\n  Elige la opcion\n 1=Suma\n  2=Resta\n  3=Multiplicacion\n 4=Divison\n 5=Para salir\n"
     while True:
         option=int(input(message))
@@ -30,12 +31,12 @@ if __name__ == '__main__':
             numeros=return_values()
             resultado_resta=resta(numeros[0], numeros[1])
             print("el resultado de la resta es ", resultado_resta)
-        if option==3:
+        elif option==3:
             #pedir numeros al usuario
             numeros=return_values() 
             resultado_multi=multi(numeros[0], numeros[1])
             print("el resultado de la multiplicacion es ", resultado_multi)
-        if option==4:
+        elif option==4:
             #pedir numeros al usuario
             numeros=return_values() 
             resultado_div=div(numeros[0], numeros[1])
