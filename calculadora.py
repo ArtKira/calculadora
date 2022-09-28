@@ -9,6 +9,8 @@ def multi(num1, num2):
     return num1*num2
 
 def div(num1, num2):
+    if num2==0:
+        num2=1
     return num1/num2
 def return_values():
     num1=int(input("Ingresa un numero "))
